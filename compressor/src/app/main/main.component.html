@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Cards in One Row</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Your custom CSS -->
+  <style>
+    .card {
+      width: 250px; /* Set the width of the card */
+      height: 400px; /* Set the height of the card */
+    }
+    .card-img-top {
+      height: 50%; /* Set the height of the card image */
+    }
+    .card-body {
+      height: 50%; /* Set the height of the card body */
+      overflow: hidden; /* Hide overflow content */
+    }
+    .h {
+      text-align: center; /* Center align the heading */
+    }
+  </style>
+</head>
+<body>
+    <div class="h">
+        <h1>Our Products</h1>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let card of cards">
+        <div class="card">
+          <!-- Card Content -->
+          <img [src]="card.imageUrl" class="card-img-top" [alt]="card.imageAlt">
+          <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <p class="card-text">{{ card.description }}</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imp">
+    <h1>For more Details Contact at 9949030770</h1>
+  </div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+  
